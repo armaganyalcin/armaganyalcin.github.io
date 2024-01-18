@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mutlu Patiler | Ana Sayfa</title>
+		<link rel="icon" type="image/png" href="img/favicon.png"/>
+		<link rel="stylesheet" href="index.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
+		<script src="index.js"></script>
+	</head>
+
+	<body onload="changePage()" onhashchange="changePage()">
+		<div id="overlay">
+			<div id="topBar">
+				<div id="linkContain">
+					<div class="linkHover">
+						<a id="mainLink" class="navLink linkActive" href="#mainpage">Ana Sayfa</a>
+					</div>
+					<div class="linkHover">
+						<a id="infoLink" class="navLink" href="#store">Mağaza</a>
+					</div>
+					<div class="linkHover">
+						<a id="downLink" class="navLink" href="#about">Hakkımızda</a>
+					</div>
+					<div class="linkHover">
+						<a id="supportLink" class="navLink" href="#contact">İletişim</a>
+					</div>
+				</div>
+			</div>
+			<div id="contentMain">
+				<span id="firstContent" class="content inactive">
+				</span>
+				<span id="secondContent" class="content">
+				</span>
+			</div>
+		</div>
+	</body>
+</html>

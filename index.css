@@ -1,0 +1,176 @@
+body {
+	font-family: Poppins;
+	font-size: 28pt;
+}
+
+.navLink {
+	text-decoration: none;
+	color: rgb(0, 0, 0, 0.75);
+	position: relative;
+    transition: color 0.4s;
+	font-style: normal;
+	margin-top: -50px;
+	margin-left: 60px;
+}
+
+.navLink:after 
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 10px;
+	left: 0;
+	width: 0%;
+	border-bottom: 3px solid #9300CEC0;
+	transition: 0.4s;
+}
+
+.linkHover{
+	display: inline-grid;
+}
+
+.linkHover:hover .navLink
+{
+	color: #9300CEC0;
+}
+
+.linkHover:hover .navLink:after
+{
+	width: auto;
+}
+
+.linkHover:hover .iconImg
+{
+	filter: grayscale(0%) brightness(100%);	
+}
+
+.iconImg{
+	max-width: 48px;
+	transition: filter 0.4s;
+	filter: grayscale(100%) brightness(200%);
+}
+
+
+#linkContain
+{
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 20px;
+	row-gap: 10px;
+}
+
+#overlay
+{
+	background-image: url("img/background.png");
+	background-repeat: repeat;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow-y: hidden;
+    animation: animatedBackground 10s linear infinite;
+}
+
+#topBar
+{
+	text-align: center;
+	background: rgba(239, 187, 255, 0.30);
+	position: fixed;
+	left: 30px;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	height: 100px;
+	border-radius: 30px;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.50);
+}
+
+#logo
+{
+	image-rendering: auto;
+	content: url("img/logo.png");
+	position: fixed;
+	left: -10px;
+	right: -10px;
+	top: -10px;
+	scale: 50%;
+}
+
+#contentMain
+{
+	font-size: calc(10pt + 0.5vw);
+	display: grid;
+	background: rgba(239, 187, 255, 0.30);
+	position: fixed;
+	left: 30px;
+	top: 150px;
+	right: 30px;
+	bottom: 30px;
+	border-radius: 30px;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.50);
+	min-height: 550px;
+}
+
+.content
+{
+	grid-column: 1;
+	grid-row: 1;
+	text-align: center;
+	color: rgb(0, 0, 0, 0.75);
+	display: inline;
+	position: relative;
+	padding: -30px 20px -30px 20px;
+	margin: 30px 20px 30px 20px;
+
+	flex-grow: 1;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	opacity: 100%;
+	transition: opacity 0.3s;
+}
+
+
+.content::-webkit-scrollbar {
+  width: 7px;       
+}
+
+.content::-webkit-scrollbar-track {
+	left: 50px;
+	top: 50px;
+	bottom: 5px;
+	position: fixed;
+  	background: rgba(60, 12, 72, 0); 
+	border-radius: 20px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  	background: rgba(169, 0, 211, 0.75); 
+	border-radius: 20px;      
+}
+
+.linkActive
+{
+	font-weight: bold;
+	color: #9300ce;
+	filter: grayscale(0%) brightness(100%);	
+}
+
+.content.inactive {
+	opacity: 0;
+}
+
+.content.active {
+	opacity: 1;
+}
+
+@keyframes animatedBackground 
+{
+	from {
+		background-position: 0px 0px;
+	}
+	to {
+		background-position: 213px 194px;
+	}
+}
