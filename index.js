@@ -29,7 +29,7 @@ async function changePage()
 
     if (window.getComputedStyle(_firstContent).getPropertyValue("opacity") != 0)
     {
-        await fetch('http://localhost/md/' + _fetchHash.substring(1).toLowerCase() +'.md')
+        await fetch('https://armaganyalcin.github.io/md/' + _fetchHash.substring(1).toLowerCase() +'.md')
         .then(response=> response.text())
         .then(text=> _secondContent.innerHTML = md.render(text))
         
@@ -46,7 +46,7 @@ async function changePage()
 
     else if (window.getComputedStyle(_secondContent).getPropertyValue("opacity") != 0)
     {
-        await fetch('http://localhost/md/' + _fetchHash.substring(1).toLowerCase() +'.md')
+        await fetch('https://armaganyalcin.github.io/md/' + _fetchHash.substring(1).toLowerCase() +'.md')
         .then(response=> response.text())
         .then(text=> _firstContent.innerHTML = md.render(text))
 
