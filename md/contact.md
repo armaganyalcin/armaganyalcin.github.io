@@ -4,7 +4,7 @@
 
 Aşağıda hizmet verdiğimiz ülkelerdeki şubelerimizin telefon numaralarını bulabilirsiniz:
 
-+90 506 100 09 00 (TURKEY)
++90 506 100 09 00 (TURKEY)  
 +383 44 708 513 (KOSOVO)
 
 ## Konum
